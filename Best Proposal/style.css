@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .section {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Heart Animation */
+  .heart {
+    width: 120px;
+    height: 110px;
+    position: relative;
+    background-color: #ff6f91;
+    transform: rotate(-45deg);
+    margin: 20px auto;
+    animation: heartbeat 1.5s infinite;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    width: 120px;
+    height: 110px;
+    background-color: #ff6f91;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .heart:before {
+    top: -60px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 60px;
+    top: 0;
+  }
+  
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1) rotate(-45deg); }
+    50% { transform: scale(1.1) rotate(-45deg); }
+  }
+  
+  /* Main Button */
+  .btn-main {
+    padding: 12px 30px;
+    background-color: #ff6f91;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-main:hover {
+    background-color: #ff4081;
+  }
+  
+  /* Option Buttons */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .btn-option {
+    padding: 10px 25px;
+    margin: 0 10px;
+    background-color: #ff6f61;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  #yesButton:hover {
+    background-color: #ff4081;
+  }
+  
+  #noButton {
+    background-color: #ff9a8b;
+  }
+  
+  #noButton:hover {
+    top: calc(10px - 5vh);
+    left: calc(10px - 5vw);
+    transition: top 0.2s, left 0.2s;
+  }
+  
+  /* Messages */
+  .message-card {
+    padding: 20px;
+    background-color: #ffe3e3;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    font-size: 1.2em;
+    opacity: 0.9;
+  }
+  
+  /* Messages Display */
+  #sadMessage, #finalMessage {
+    font-size: 1.2em;
+    color: #444;
+    margin-top: 20px;
+  }
+  

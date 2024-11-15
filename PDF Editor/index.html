@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bus Ticket Booking</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Bus Ticket Booking System</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Routes</a>
+      <a href="#">Contact</a>
+      <a href="#">About Us</a>
+    </nav>
+  </header>
+
+  <!-- Booking Form Section -->
+  <main>
+    <section class="booking-form">
+      <h2>Book Your Ticket</h2>
+      <form id="ticketForm">
+        <label for="departure">From</label>
+        <input type="text" id="departure" placeholder="Enter departure city" list="cities" required />
+
+        <label for="destination">To</label>
+        <input type="text" id="destination" placeholder="Enter destination city" list="cities" required />
+
+        <!-- Cities List for Autocomplete -->
+        <datalist id="cities">
+          <!-- Include popular Indian cities here for demo -->
+          <option value="Mumbai"></option>
+          <option value="Delhi"></option>
+          <option value="Bangalore"></option>
+          <option value="Chennai"></option>
+          <option value="Kolkata"></option>
+          <!-- Add more cities -->
+        </datalist>
+
+        <label for="date">Date of Journey</label>
+        <input type="date" id="date" required />
+
+        <label for="time">Select Bus Time</label>
+        <select id="time" required>
+          <option value="08:00 AM">08:00 AM</option>
+          <option value="12:00 PM">12:00 PM</option>
+          <option value="04:00 PM">04:00 PM</option>
+          <option value="08:00 PM">08:00 PM</option>
+        </select>
+
+        <label for="passenger-count">Number of Passengers</label>
+        <input type="number" id="passenger-count" min="1" max="10" value="1" required />
+
+        <label for="passenger-details">Passenger Details</label>
+        <div id="passenger-details">
+          <div class="passenger">
+            <input type="text" placeholder="Name" class="passenger-name" required />
+            <input type="number" placeholder="Age" class="passenger-age" min="0" required />
+            <input type="tel" placeholder="Mobile Number" class="passenger-mobile" required />
+          </div>
+        </div>
+        <button type="button" id="add-passenger">Add Passenger</button>
+
+        <label for="amount">Ticket Amount</label>
+        <input type="text" id="amount" value="500" disabled />
+
+        <label for="duration">Travel Duration (hrs)</label>
+        <input type="text" id="duration" value="4" disabled />
+
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2023 Bus Ticket Booking System</p>
+    <p>Contact: info@busticket.com | Phone: +123 456 7890</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

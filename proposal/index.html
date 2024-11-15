@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Marry Me?</title>
+  <style>
+    /* Basic styling */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #ffebcd;
+      overflow: hidden;
+      position: relative;
+    }
+    h1, h2 {
+      color: #ff1493;
+      text-align: center;
+      font-size: 3rem;
+      margin: 1rem;
+    }
+    #proposal-text {
+      font-size: 1.5rem;
+      color: #ff69b4;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 80%;
+      padding: 0 20px;
+    }
+    #buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .btn {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      background-color: #ff69b4;
+      color: #fff;
+    }
+    #yes-btn {
+      background-color: #32cd32;
+    }
+    #no-btn {
+      background-color: #ff4500;
+      position: absolute;
+    }
+    #yes-btn:hover {
+      background-color: #228b22;
+    }
+
+    /* Animated hearts */
+    .heart {
+      position: absolute;
+      font-size: 2rem;
+      animation: float 4s ease-in infinite;
+      color: #ff69b4;
+      opacity: 0.8;
+    }
+    @keyframes float {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+
+    /* Fade-in effect for text */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Proposal content -->
+  <div>
+    <h1 class="fade-in">❤️ Will You Marry Me? ❤️</h1>
+    <p id="proposal-text" class="fade-in">"You are my today and all of my tomorrows." 🌹</p>
+    <div id="buttons" class="fade-in">
+      <button id="yes-btn" class="btn">Yes 💍</button>
+      <button id="no-btn" class="btn">No 😢</button>
+    </div>
+  </div>
+
+  <!-- Background music -->
+  <audio id="bg-music" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    // Get elements
+    const noBtn = document.getElementById('no-btn');
+    const yesBtn = document.getElementById('yes-btn');
+    const proposalText = document.getElementById('proposal-text');
+    const bgMusic = document.getElementById('bg-music');
+
+    // Start music
+    bgMusic.play();
+
+    // Animated hearts generator
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = `${Math.random() * 100}vw`;
+      heart.style.animationDuration = `${2 + Math.random() * 3}s`;
+      heart.innerText = '❤️';
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 4000);
+    }
+    setInterval(createHeart, 500);
+
+    // Romantic quotes
+    const messages = [
+      "You complete me. 💖",
+      "I never knew love until I met you. 🌹",
+      "Every moment with you is a dream come true. 💕",
+      "Together is my favorite place to be. 🌸",
+      "Will you be mine forever? 💍"
+    ];
+
+    // Display each message one by one
+    let messageIndex = 0;
+    function showNextMessage() {
+      if (messageIndex < messages.length) {
+        proposalText.innerText = messages[messageIndex];
+        proposalText.classList.add('fade-in');
+        messageIndex++;
+        setTimeout(showNextMessage, 2000);
+      }
+    }
+    showNextMessage();
+
+    // "No" button moving effect
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - noBtn.clientWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.clientHeight);
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    // "Yes" button click event
+    yesBtn.addEventListener('click', () => {
+      document.body.innerHTML = `<h2 style="color:#ff69b4; text-align:center; font-size:3rem;">Yay! 🎉 You said YES! 💖 We're meant to be together forever! 🌹</h2>`;
+      bgMusic.pause();
+    });
+
+  </script>
+</body>
+</html>

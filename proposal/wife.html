@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मेरे प्यार के लिए</title>
+  <style>
+    /* Basic styling */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+    }
+    h1 {
+      color: #ff6b6b;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      color: #e02716;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #e01650;
+      font-size: 1.2rem;
+      margin: 0.5rem;
+    }
+    .btn {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      transition: transform 0.2s, background-color 0.3s;
+      background-color: #f8b4b4;
+      color: #fff;
+    }
+    .btn:hover {
+      background-color: #d30d0d;
+      transform: scale(1.1);
+    }
+    #messages {
+      display: none;
+      margin-top: 2rem;
+    }
+    #emergency-btn {
+      margin-top: 1.5rem;
+      display: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      color: #ff6b6b;
+      background: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 1px solid #ff6b6b;
+    }
+    #emergency-btn:hover {
+      background-color: #ff6b6b;
+      color: #fff;
+    }
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      font-size: 1.5rem;
+      animation: float 5s ease-in infinite;
+      color: #ffa69e;
+      opacity: 0.7;
+    }
+    @keyframes float {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Main content -->
+  <div>
+    <h1>मेरे गुस्सैल परी के लिए 😇</h1>
+    <h2>"जब आप मुस्कुराती हैं, तो मेरी दुनिया रोशन हो जाती है!"</h2>
+    <button class="btn" onclick="showMessages()">यहाँ क्लिक करें माफ़ी के लिए ❤️</button>
+    <div id="messages">
+      <p id="message-text">"मुझे माफ़ कर दो, मेरे प्यार। मैं आपको दुखी नहीं करना चाहता था।" 😔</p>
+      <button id="emergency-btn" onclick="emergencyApology()">इमरजेंसी माफ़ी बटन 🚨</button>
+    </div>
+  </div>
+
+  <!-- Floating hearts animation -->
+  <script>
+    // Floating heart animation
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+      heart.innerText = "❤️";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 700);
+
+    // Apology messages
+    const messages = [
+      "आप मेरे लिए पूरी दुनिया हैं, और मैं आपको कभी भी दुखी नहीं देखना चाहता। ❤️",
+      "मुझे माफ़ कर दो अगर मैंने आपको दुखी किया। क्या आप मुझे माफ़ करेंगी? 😢",
+      "आप मेरा दिल हैं, मेरा सबकुछ। चलो सबकुछ ठीक कर लेते हैं। 💕",
+      "मैं वादा करता हूँ कि और बेहतर बनूंगा क्योंकि आप सबसे अच्छा डिजर्व करती हैं। 💖",
+      "आप जानती हैं कि मैं आपसे प्यार करता हूँ, है ना? 😊",
+      "आप मेरे लिए सबसे कीमती हैं, और मैं आपको हंसाने के लिए कुछ भी करूंगा। 🌹"
+    ];
+    let messageIndex = 0;
+
+    // Display each message on button click
+    function showMessages() {
+      const messageDiv = document.getElementById("messages");
+      const messageText = document.getElementById("message-text");
+      const emergencyBtn = document.getElementById("emergency-btn");
+
+      // Show the message section
+      messageDiv.style.display = "block";
+
+      // Change message each time
+      messageText.innerText = messages[messageIndex];
+      messageIndex = (messageIndex + 1) % messages.length;
+
+      // Show emergency button after a few clicks
+      if (messageIndex === 2) {
+        emergencyBtn.style.display = "block";
+      }
+    }
+
+    // Emergency apology message
+    function emergencyApology() {
+      alert("मैं आपका पसंदीदा खाना मंगवा रहा हूँ, और आपको असीमित बैक रब देने के लिए तैयार हूँ! 🤗");
+      alert("आप मेरे एकमात्र हैं, और मैं हर दिन आपके लिए आभारी हूँ। ❤️");
+      alert("माफियों, प्यार और मुस्कुराहट की जीवनभर की सप्लाई भेज रहा हूँ! 😘");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Landing Page -->
+  <section id="landing" class="section">
+    <div class="heart"></div>
+    <h1>Hi Riya, I have something special to tell you...</h1>
+    <button class="btn-main" onclick="showMessages()">See More</button>
+  </section>
+
+  <!-- Messages Section -->
+  <section id="messages" class="section hidden">
+    <div class="message-card" id="message1">You're amazing just the way you are.</div>
+    <div class="message-card hidden" id="message2">I love every moment with you.</div>
+    <div class="message-card hidden" id="message3">You mean the world to me.</div>
+    <button class="btn-main" onclick="nextMessage()">Next</button>
+  </section>
+
+  <!-- Proposal Section -->
+  <section id="proposal" class="section hidden">
+    <h2>Will you be my girlfriend?</h2>
+    <div class="buttons">
+      <button id="yesButton" class="btn-option">Yes</button>
+      <button id="noButton" class="btn-option">No</button>
+    </div>
+    <div id="sadMessage" class="hidden">Oh no, please don't break my heart 💔</div>
+    <div id="finalMessage" class="hidden">Yay! I'm so happy you're mine! ❤️</div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

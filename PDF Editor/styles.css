@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background-color: #0078d7;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Section */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* Booking Form Styling */
+.booking-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.booking-form h2 {
+  margin-bottom: 1rem;
+  color: #0078d7;
+}
+
+.booking-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.booking-form input,
+.booking-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.booking-form button {
+  background-color: #0078d7;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.booking-form button:hover {
+  background-color: #005bb5;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+}
+/* General styling for form expansion */
+#passenger-details .passenger {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+#passenger-details .passenger input {
+  flex: 1;
+}
+
+#add-passenger {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: #0078d7;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#add-passenger:hover {
+  background-color: #005bb5;
+}
