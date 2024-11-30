@@ -1,0 +1,235 @@
+/* General Body Styling */
+body {
+    font-family: 'Cursive', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    color: #fff;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #ff6b81;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #fff;
+}
+
+/* Main Form Styling */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    width: 80%;
+}
+
+.boy-section,
+.girl-section {
+    width: 45%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border: 2px solid #ff6b81;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ff6b81;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 2px solid #ff6b81;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.2rem;
+    background: #ff6b81;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #ff3c5a;
+    transform: scale(1.05);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: linear-gradient(120deg, #fad0c4, #ff9a9e);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-width: 500px;
+    width: 80%;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    background: #ff6b81;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.modal-content .close:hover {
+    background: #ff3c5a;
+}
+
+#resultText {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+#loveQuote {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-style: italic;
+    color: #444;
+}
+
+/* Heart Background */
+body::after {
+    content: "❤️ 💕 💖";
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+body::before {
+    content: "💓 💘 💞";
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Guna Table Styling */
+#gunaTable {
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#gunaTable th,
+#gunaTable td {
+    border: 1px solid #ff6b81;
+    padding: 10px;
+}
+
+#gunaTable th {
+    background: #ff6b81;
+    color: white;
+}
+
+#gunaTable td {
+    background: #ffe5e9;
+    color: #333;
+}
+
+/* Result Section Styling */
+#overallResult {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+#percentage {
+    font-weight: bold;
+    color: #ff3c5a;
+}
+
+#detailedExplanation {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #444;
+}

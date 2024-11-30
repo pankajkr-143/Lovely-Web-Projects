@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panchang Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panchang Details for Your Love Journey 💖</h1>
+    </header>
+
+    <section class="form-container">
+        <h2>Fill Your Details</h2>
+        <form id="panchangForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required>
+            
+            <label for="place">Place of Birth</label>
+            <input type="text" id="place" placeholder="Enter your birthplace" required>
+            
+            <button type="submit">Get Panchang</button>
+        </form>
+    </section>
+
+    <section id="resultContainer" class="result-container hidden">
+        <h2>Your Panchang</h2>
+        <p>Our Hindu culture believes that all tasks should be done according to the right astrological time and we generally know them as mahurats. In order to plan your tasks according to right panchangs, it is important that you have a list of all the right mahurats that will be available for you in the future. Here we have a calculator for your panchang so that you can work according to mahurats.</p>
+        <p id="panchangDescription"></p>
+        <ul id="panchangDetails"></ul>
+        <p id="loveQuote" class="love-quote"></p>
+    </section>
+
+    <footer>
+        Made with ❤️ by your Astrologer | <a href="#">Contact Us</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

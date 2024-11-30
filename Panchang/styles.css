@@ -1,0 +1,120 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(to bottom right, #ff758c, #ff7eb3);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffe3ed;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Form container */
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #ffe3ed;
+}
+
+.form-container label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.form-container button {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #ff1e4a;
+}
+
+/* Result container */
+.result-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    text-align: left;
+}
+
+.result-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ffe3ed;
+    margin-bottom: 15px;
+}
+
+.result-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.result-container ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.result-container ul li::before {
+    content: "❤️ ";
+    margin-right: 5px;
+    color: #ff4d6d;
+}
+
+.love-quote {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffe3ed;
+}

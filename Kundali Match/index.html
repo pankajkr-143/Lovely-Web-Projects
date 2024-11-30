@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kundali Matching</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Kundali Matching</h1>
+        <p>Check your compatibility based on astrology!</p>
+    </header>
+    <main class="form-container">
+        <form id="kundaliForm">
+            <div class="details-container">
+                <section class="boy-section">
+                    <h2>Boy's Details</h2>
+                    <div class="form-group">
+                        <label for="boyName">Name:</label>
+                        <input type="text" id="boyName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="boyDob">Date of Birth:</label>
+                        <input type="date" id="boyDob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="boyTime">Time of Birth:</label>
+                        <input type="time" id="boyTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="boyPlace">Place of Birth:</label>
+                        <input type="text" id="boyPlace" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="boyZodiac">Zodiac Sign:</label>
+                        <select id="boyZodiac" required>
+                            <option value="">Select Zodiac</option>
+                            <option value="aries">Aries</option>
+                            <option value="taurus">Taurus</option>
+                            <option value="gemini">Gemini</option>
+                            <option value="cancer">Cancer</option>
+                            <option value="leo">Leo</option>
+                            <option value="virgo">Virgo</option>
+                            <option value="libra">Libra</option>
+                            <option value="scorpio">Scorpio</option>
+                            <option value="sagittarius">Sagittarius</option>
+                            <option value="capricorn">Capricorn</option>
+                            <option value="aquarius">Aquarius</option>
+                            <option value="pisces">Pisces</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="girl-section">
+                    <h2>Girl's Details</h2>
+                    <div class="form-group">
+                        <label for="girlName">Name:</label>
+                        <input type="text" id="girlName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="girlDob">Date of Birth:</label>
+                        <input type="date" id="girlDob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="girlTime">Time of Birth:</label>
+                        <input type="time" id="girlTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="girlPlace">Place of Birth:</label>
+                        <input type="text" id="girlPlace" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="girlZodiac">Zodiac Sign:</label>
+                        <select id="girlZodiac" required>
+                            <option value="">Select Zodiac</option>
+                            <option value="aries">Aries</option>
+                            <option value="taurus">Taurus</option>
+                            <option value="gemini">Gemini</option>
+                            <option value="cancer">Cancer</option>
+                            <option value="leo">Leo</option>
+                            <option value="virgo">Virgo</option>
+                            <option value="libra">Libra</option>
+                            <option value="scorpio">Scorpio</option>
+                            <option value="sagittarius">Sagittarius</option>
+                            <option value="capricorn">Capricorn</option>
+                            <option value="aquarius">Aquarius</option>
+                            <option value="pisces">Pisces</option>
+                        </select>
+                    </div>
+                </section>
+            </div>
+
+            <div class="buttons">
+                <button type="button" id="matchButton">Check Compatibility</button>
+                <button type="reset" id="resetButton">Reset</button>
+            </div>
+        </form>
+    </main>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Horoscope Matching Results</h2>
+            <div id="resultText"></div>
+            <h3>Guna Milan Breakdown</h3>
+            <table id="gunaTable">
+                <thead>
+                    <tr>
+                        <th>Guna</th>
+                        <th>Score</th>
+                        <th>Max Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Guna rows will be dynamically added here -->
+                </tbody>
+            </table>
+            <div id="overallResult">
+                <p id="percentage"></p>
+                <p id="detailedExplanation"></p>
+            </div>
+            <div id="loveQuote"></div>
+        </div>
+    </div>    
+
+    <!-- Pop-up Modal -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="resultText"></div>
+            <div id="loveQuote"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

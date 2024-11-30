@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Bond Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>❤️ Love Bond Calculator ❤️</h1>
+    <p>Enter your details to calculate the love bond!</p>
+    <form id="loveForm">
+      <input type="text" id="name1" placeholder="Your Name" required>
+      <select id="gender1">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="number" id="age1" placeholder="Your Age" min="0" required>
+      
+      <input type="text" id="name2" placeholder="Their Name" required>
+      <select id="gender2">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="number" id="age2" placeholder="Their Age" min="0" required>
+      
+      <button type="submit">Calculate Love</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

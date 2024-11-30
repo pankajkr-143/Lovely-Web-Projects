@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friendship Bond Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💖 Friendship & Love Bond Calculator 💖</h1>
+    <p>Calculate the bond between you and someone special! 💕</p>
+    <form id="bondForm">
+      <div class="input-group">
+        <label for="name1">Your Name:</label>
+        <input type="text" id="name1" required>
+      </div>
+      <div class="input-group">
+        <label for="gender">Your Gender:</label>
+        <select id="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" min="1" required>
+      </div>
+      <div class="input-group">
+        <label for="name2">Partner's Name:</label>
+        <input type="text" id="name2" required>
+      </div>
+      <div class="input-group">
+        <label for="gender">Partner's Gender:</label>
+        <select id="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="age">Partner's Age:</label>
+        <input type="number" id="age" min="1" required>
+      </div>
+      <button type="button" id="calculateBtn">Calculate Bond 💘</button>
+    </form>
+    <div id="result" class="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
